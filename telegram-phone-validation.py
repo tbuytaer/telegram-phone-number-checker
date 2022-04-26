@@ -7,14 +7,13 @@ import argparse
 import os
 from getpass import getpass
 import json
-
-load_dotenv("../.env")
+import details as ds
 
 result = {}
 
-API_ID = os.getenv('API_ID')
-API_HASH = os.getenv('API_HASH')
-PHONE_NUMBER = os.getenv('PHONE_NUMBER')
+API_ID = ds.apiID
+API_HASH = ds.apiHash
+PHONE_NUMBER = ds.number
 
 def get_names(phone_number):    
     try:
